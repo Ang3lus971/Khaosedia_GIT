@@ -40,13 +40,33 @@
                 </p>
                 <p>
                     <label for="alimentation">Alimentation : </label>
-                    <select>
-                        
+                    <select name="alimentation" id="alimentation">
+                        <option disabled selected value>--Sélèctionnez un type d'alimentation--</option>
+                        <optgroup label="Carnivore">
+                            <option value="carnivore">Carnivore</option>
+                            <option value="piscivore">Piscivore</option>
+                            <option value="hematophage">Hématophage</option>
+                            <option value="oophage">Oophage</option>
+                        </optgroup>
+
+                        <optgroup label="Vegetarien">
+                            <option value="herbivore">Herbivore</option>
+                            <option value="granivore">Granivore</option>
+                            <option value="frugivore">Frugivore</option>
+                            <option value="nectarivore">Nectarivore</option>
+                        </optgroup>
+                        <optgroup label="Omnivore">
+                            <option value="omnivore">Omnivore</option>
+                        </optgroup>
                     </select>
                 </p>
                 <p>
                     <label for="divinite">Divinité principale : </label>
                     <input type="text" name="divinite">
+                </p>
+                <p>
+                    <label for="info_supp_race">Information(s) <br/>supplémentaire(s) : </label>
+                    <textarea name="info_supp_race"></textarea>
                 </p>
             </fieldset>
         </form>
@@ -72,16 +92,26 @@
                     <input type="text" name="nomDir">
                 </p>
                 <p>
+                    <label for="allegence_ville">Allégence de la ville : </label>
+                    <input type="text" name="allegence_ville">
+                </p>
+                <p>
                     <label for="categorie_ville">Type de ville : </label>
                     <select>
-                        
+                        <option disabled selected value>--Sélèctionnez le type de ville--</option>
+                        <option value="capitale">Capitale</option>
+                        <option value="citee fortifiee">Cité Fortifiée</option>
+                        <option value="ville">Bourg</option>
+                        <option value="village">Village</option>
                     </select>
                 </p>
                 <p>
                     <label for="fonction_ville">Fonction(s) de la ville : </label>
-                    <select>
-                        
-                    </select>
+                    <textarea name="fonction_ville"></textarea>
+                </p>
+                <p>
+                    <label for="info_supp_ville">Information(s) <br/>supplémentaire(s) : </label>
+                    <textarea name="info_supp_ville"></textarea>
                 </p>
             </fieldset>
         </form>
@@ -96,13 +126,16 @@
                 </p>
                 <p>
                    <label for="nbMembresPouv">Nombre de dirigeants :</label>
-                   <input type="number" name="nbMembresPouv" id="nbMembresPouv" min="0" max="10">
-                   <input type="button" name="nbDir" value="valider" onclick="CreerInputDir();">
+                   <input type="number" name="nbMembresPouv" id="nbMembresPouv" min="0" max="10" onblur="CreerInputDir();">
                 </p>
                 <div id="membresPouv"> </div>
                 <p>
                     <label for="secteur">Secteur(s) d'activité : </label>
-                    <input type="textarea" name="secteur">
+                    <textarea name="secteur"></textarea>
+                </p>
+                <p>
+                    <label for="info_supp_orga">Information(s) <br/> supplémentaire(s) : </label>
+                    <textarea name="info_supp_orga"></textarea>
                 </p>
             </fieldset>
         </form>
