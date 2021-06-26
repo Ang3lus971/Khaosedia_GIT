@@ -5,9 +5,9 @@
     <title>Khaosedia</title>
 
     <style type="text/css"></style>
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="vue/style/style.css">
 
-    <script type="text/javascript" src="style/fonctionsJS.js"></script>
+    <script type="text/javascript" src="JavaScript/fonctionsPourContenu.js"></script>
 
 </head>
 <body>
@@ -25,9 +25,13 @@
             <label>Ajouter une nouvelle organisation :</label>
             <input type="radio" name="choix" id="id_organisation" value="organisation" onclick="afficherDivContenu();">
         </p>
+
+        <p>
+         <input type="button" onclick="location.href='Khaosedia.php';" value="Retour Accueil" class="bouton_retour" />
+        </p>
     </div>
     <div class="NewRace" id="NewRace">
-        <form action="index.php" method="POST">
+        <form action="Khaosedia.php" method="POST">
             <fieldset>
                 <legend>Ajouter une race/espèce</legend>
                 <p>
@@ -72,7 +76,7 @@
         </form>
     </div>
     <div class="NewVille" id="NewVille">
-        <form action="index.php" method="POST">
+        <form action="Khaosedia.php" method="POST">
             <fieldset>
                 <legend>Ajouter une ville</legend>
                 <p>
@@ -117,7 +121,7 @@
         </form>
     </div>
     <div class="NewOrganisation" id="NewOrganisation">
-        <form action="index.php" method="POST">
+        <form action="Khaosedia.php" method="POST">
             <fieldset>
                 <legend>Ajouter une organisation</legend>
                 <p>
@@ -126,7 +130,7 @@
                 </p>
                 <p>
                    <label for="nbMembresPouv">Nombre de dirigeants :</label>
-                   <input type="number" name="nbMembresPouv" id="nbMembresPouv" min="0" max="10" onblur="CreerInputDir();">
+                   <input type="text" name="nbMembresPouv" id="nbMembresPouv" onblur="CreerInputDir();">
                 </p>
                 <div id="membresPouv"> </div>
                 <p>
@@ -140,7 +144,5 @@
             </fieldset>
         </form>
     </div>
-   <p>
-        <input type="button" onclick="location.href='KhaosAccueil.php';" value="Retour Accueil"/>
-    </p> 
+     
 </body>

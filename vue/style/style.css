@@ -6,10 +6,15 @@ html,body {
 	background-color: #FFFAF0;
 }
 
-div.NewRace, div.NewVille, div.NewOrganisation {display: none; }
+/* Style pour PageContenu.php */
+
+div.NewRace, div.NewVille, div.NewOrganisation {
+	display: none;
+	position: relative;
+}
 
 fieldset {
-	width: 80%;
+	width: 60%;
 	margin: auto;
 	background-color: #F0FFF0;
 }
@@ -24,4 +29,20 @@ div:not(.choix_contenu) label{
 	display:block; 
 	width: 160px;
 	float:left;
+}
+
+div.choix_contenu {
+	position: fixed, absolute;
+	margin-left: 1%;
+}
+
+div.choix_contenu label {
+	display:block; 
+	width: 180px;
+	float:left;
+}
+
+input.bouton_retour {
+	display: block;
+	margin-top: 4%;
 }

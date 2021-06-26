@@ -25,19 +25,20 @@ function afficherDivContenu(){
 }
 
 function CreerInputDir() {
-    var nbDir = parseInt((document.getElementById('nbMembresPouv').value).toString());
+    var nbDir = (document.getElementById('nbMembresPouv').value).toString();
     var chaine = '';
+
     if(nbDir>10) {
-        alert("Le nombre de dirigeants ne peut excéder 10 personnes");
+        alert("Le nombre de dirigeants ne peut excéder 10 personnes.");
     }
     else {
-       for (var i = 1; i <= nbDir; i++) {
+        for (var i = 1; i <= nbDir; i++) {
         var numero = i.toString();
         chaine  = chaine + '<p>';
         chaine = chaine + '<label for='+"nomDir"+numero+'>' + "Nom Dirigent "+numero+' : </label>';
         chaine = chaine + '<input type="text" name='+"nomDir"+numero+'>';
         chaine  = chaine + '</p>';
         }
-        document.getElementById('membresPouv').innerHTML=chaine; 
-    } 
+        document.getElementById('membresPouv').innerHTML=chaine;       
+    }
 }
